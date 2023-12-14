@@ -1,0 +1,50 @@
+/* @font-face {
+    font-family: 'alex_brushregular';
+    src: url('fonts/alexbrush-regular-webfont.woff2') format('woff2'),
+        url('fonts/alexbrush-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'alegreya_sansregular';
+    src: url('fonts/alegreyasans-regular-webfont.woff2') format('woff2'),
+        url('fonts/alegreyasans-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'open_sansregular';
+    src: url('fonts/OpenSans-Regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+} */
+
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto/Roboto-Regular.ttf') format('truetype'),
+        url('../fonts/Roboto/Roboto-Thin.ttf') format('truetype'),
+        url('../fonts/Roboto/Roboto-ThinItalic.ttf') format('truetype'),
+        url('../fonts/Roboto/Roboto-Black.ttf') format('truetype'),
+        url('../fonts/Roboto/Roboto-BlackItalic.ttf') format('truetype'),
+        url('../fonts/Roboto/Roboto-Bold.ttf') format('truetype'),
+        url('../fonts/Roboto/Roboto-BoldItalic.ttf') format('truetype'),
+        url('../fonts/Roboto/Roboto-Italic.ttf') format('truetype'),
+        url('../fonts/Roboto/Roboto-Light.ttf') format('truetype'),
+        url('../fonts/Roboto/Roboto-LightItalic.ttf') format('truetype'),
+        url('../fonts/Roboto/Roboto-Medium.ttf') format('truetype'),
+        url('../fonts/Roboto/Roboto-MediumItalic.ttf') format('truetype');
+
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Pacifico';
+    src: url('../fonts/Pacifico/Pacifico-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}

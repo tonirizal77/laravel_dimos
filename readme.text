@@ -1,0 +1,6 @@
+untuk bisa mengakses lewat hp:
+command:
+    php artisan serve --host=0.0.0.0
+
+lalu akses url di hp : http://192.168.100.61:8000
+

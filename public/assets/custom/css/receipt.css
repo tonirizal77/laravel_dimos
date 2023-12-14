@@ -1,0 +1,57 @@
+.uk80 {
+    width: 335px;
+    margin: 4px auto;
+    border: 1px solid rgb(221, 221, 221) ;
+    box-sizing: border-box;
+}
+
+.uk58 {
+    width: 260px;
+    margin: 4px auto;
+    border: 1px solid rgb(221, 221, 221) ;
+    box-sizing: border-box;
+}
+
+#struk_receipt,
+#struk_do
+{
+    font-size: 14px !important;
+    padding-bottom: 20px;
+}
+
+#struk_receipt p,
+#struk_do p
+{
+    margin: 0;
+}
+
+#struk_receipt .title,
+#struk_do .title
+{
+    font-weight: bold;
+    font-size: 14px;
+}
+
+#struk_receipt .address,
+#struk_do .address
+{
+    font-family: inherit;
+    font-size: 14px;
+}
+
+table#tabel_struk {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 13px;
+    color: black;
+}
+
+@media print {
+    .hidden-print,
+    .hidden-print * {
+        display: none !important;
+    }
+    .uk80, .uk58 {
+        margin: 4px 2px;
+        border: none;
+    }
+}

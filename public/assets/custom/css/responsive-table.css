@@ -1,0 +1,179 @@
+ol.collection {
+    margin: 0px;
+    padding: 0px;
+}
+
+li {
+    list-style: none;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* 2 Column Card Layout */
+@media screen and (max-width: 736px) {
+    .collection-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
+    }
+
+    .item {
+        border: 1px solid gray;
+        border-radius: 2px;
+        padding: 10px;
+    }
+
+    /* Don't display the first item, since it is used to display the header for tabular layouts*/
+    .collection-container>li:first-child {
+        display: none;
+    }
+
+    .attribute::before {
+        content: attr(data-name);
+    }
+
+    /* Attribute name for first column, and attribute value for second column. */
+    .attribute {
+        display: grid;
+        grid-template-columns: minmax(9em, 30%) 1fr;
+    }
+}
+
+/* 1 Column Card Layout */
+@media screen and (max-width:580px) {
+    .collection-container {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Tabular Layout */
+@media screen and (min-width: 737px) {
+    ol.collection {border-left: 1px solid gray;}
+
+    /* The maximum column width, that can wrap */
+    .item-container {
+        display: grid;
+        grid-template-columns: 3em 4fr 6fr 2fr 2fr 2fr 2fr 2fr;
+    }
+
+    .item-container-6 {
+        display: grid;
+        grid-template-columns: 3em 10fr 4fr 3fr 2fr;
+    }
+
+    .attribute-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(var(--column-width-min), 1fr));
+    }
+
+    /* Definition of wrapping column width for attribute groups. */
+    .colmin-15 {
+        --column-width-min: 15em;
+    }
+    .colmin-10 {
+        --column-width-min: 10em;
+    }
+    .colmin-8 {
+        --column-width-min: 8em;
+    }
+    .colmin-6 {
+        --column-width-min: 6em;
+    }
+    .colmin-5 {
+        --column-width-min: 5em;
+    }
+
+    .collection {
+        border-top: 1px solid gray;
+    }
+
+    /* In order to maximize row lines, only display one line for a cell */
+    .attribute {
+        border-right: 1px solid gray;
+        border-bottom: 1px solid gray;
+        padding: 2px 4px;
+        /* overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis; */
+    }
+
+    .attribute-button {
+        overflow: visible;
+        white-space: normal;
+        text-overflow: clip;
+    }
+
+    ol.collection-container>.item-container:first-child {
+        background-color: #28a745;
+        color: white;
+    }
+
+    ol.collection-container>.item-container-6:first-child {
+        background-color: #28a745;
+        color: white;
+        /* width: calc(100% - 10px); */
+        width: calc(100% - 17px);
+    }
+
+    ol.collection-container>.item-container:first-child .attribute {
+        text-align: center;
+        overflow: visible;
+        white-space: normal;
+    }
+    ol.collection-container>.item-container-6:first-child .attribute {
+        text-align: center;
+        overflow: visible;
+        white-space: normal;
+    }
+
+    .item-container:hover {
+        background-color: rgb(200, 227, 252);
+    }
+
+    .item-container-6:hover {
+        background-color: rgb(200, 227, 252);
+    }
+
+    /* Center header labels */
+    ol.collection-container>.item-container:first-child .attribute {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-overflow: initial;
+        overflow: auto;
+        white-space: normal;
+    }
+    ol.collection-container>.item-container-6:first-child .attribute {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-overflow: initial;
+        overflow: auto;
+        white-space: normal;
+    }
+
+    .gambar {
+        border-radius: 5px;
+        width: 150px;
+        height: 150px;
+    }
+}
+
+#header-fixed {
+    position: fixed;
+    background: #f83d23;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 6px #000;
+    color: #fff;
+}
+
+.selected-row {
+    background-color: yellow;
+}
